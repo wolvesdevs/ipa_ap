@@ -1,16 +1,18 @@
-namespace AP.UI
-{
-    public partial class MainView : Form
-    {
-        public MainView()
-        {
-            InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
-        }
+using AP.Domain.Algorithms;
 
-        private void H30SpringButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Hello, World!");
-        }
+namespace AP.UI;
+
+public partial class MainView : Form
+{
+    public MainView()
+    {
+        InitializeComponent();
+        StartPosition = FormStartPosition.CenterScreen;
+    }
+
+    private void H30SpringButton_Click(object sender, EventArgs e)
+    {
+        H30Spring h30Spring = new();
+        h30Spring.main();
     }
 }
